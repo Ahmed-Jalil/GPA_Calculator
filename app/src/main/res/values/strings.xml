@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GPAcalculator</string>
+    <string name="gpa_calculator">GPA Calculator</string>
+    <string name="course1">Course1</string>
+    <string name="enter_subject_name">Enter Subject Name</string>
+    <string name="submit">Submit</string>
+    <string name="clear">Clear</string>
+    <string name="your_calculated_gpa_is">Your Calculated GPA is:</string>
+    <string name="add_course">Add Course</string>
+</resources>
