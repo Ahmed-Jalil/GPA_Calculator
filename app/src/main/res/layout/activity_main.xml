@@ -7,216 +7,244 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#02E20D"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/aclonica"
-        android:text="@string/gpa_calculator"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:textStyle="bold" />
 
     <!-- Subject Input Fields -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:paddingBottom="20dp"
+        android:background="#F604810A">
 
-        <EditText
-            android:id="@+id/subjectName1"
-            android:layout_width="@dimen/et_subject_name_width_150dp"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_course_name"
-            android:inputType="text"
-            android:textSize="18sp" />
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/gpa_calculator"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/creditHours1"
-            android:layout_width="@dimen/et_credit_hrs_width_90dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:hint="@string/credit_hours"
-            android:inputType="number"
-            android:textSize="18sp" />
 
-        <Spinner
-            android:id="@+id/gradeSpinner1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp" />
-    </LinearLayout>
-
-    <!-- Repeating for Additional Subjects -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/subjectName2"
-            android:layout_width="@dimen/et_subject_name_width_150dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/enter_course_name"
-            android:inputType="text"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/creditHours2"
-            android:layout_width="@dimen/et_credit_hrs_width_90dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:hint="@string/credit_hours"
-            android:inputType="number"
-            android:textSize="18sp" />
-
-        <Spinner
-            android:id="@+id/gradeSpinner2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
+        android:background="#E8388E3C"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_weight="3"
+        android:orientation="vertical"
+        >
 
-        <EditText
-            android:id="@+id/subjectName3"
-            android:layout_width="@dimen/et_subject_name_width_150dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_course_name"
-            android:inputType="text"
-            android:textSize="18sp" />
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/creditHours3"
-            android:layout_width="@dimen/et_credit_hrs_width_90dp"
+            <EditText
+                android:id="@+id/subjectName1"
+                android:layout_width="@dimen/et_subject_name_width_150dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_course_name"
+                android:inputType="text"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditHours1"
+                android:layout_width="@dimen/et_credit_hrs_width_90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/credit_hours"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/gradeSpinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <!-- Repeating for Additional Subjects -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:hint="@string/credit_hours"
-            android:inputType="number"
-            android:textSize="18sp" />
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <Spinner
-            android:id="@+id/gradeSpinner3"
-            android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/subjectName2"
+                android:layout_width="@dimen/et_subject_name_width_150dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_course_name"
+                android:inputType="text"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditHours2"
+                android:layout_width="@dimen/et_credit_hrs_width_90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/credit_hours"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/gradeSpinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp" />
-    </LinearLayout>
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+            <EditText
+                android:id="@+id/subjectName3"
+                android:layout_width="@dimen/et_subject_name_width_150dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_course_name"
+                android:inputType="text"
+                android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/subjectName4"
-            android:layout_width="@dimen/et_subject_name_width_150dp"
+            <EditText
+                android:id="@+id/creditHours3"
+                android:layout_width="@dimen/et_credit_hrs_width_90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/credit_hours"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/gradeSpinner3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_course_name"
-            android:inputType="text"
-            android:textSize="18sp" />
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/creditHours4"
-            android:layout_width="@dimen/et_credit_hrs_width_90dp"
+            <EditText
+                android:id="@+id/subjectName4"
+                android:layout_width="@dimen/et_subject_name_width_150dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_course_name"
+                android:inputType="text"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditHours4"
+                android:layout_width="@dimen/et_credit_hrs_width_90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/credit_hours"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/gradeSpinner4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:hint="@string/credit_hours"
-            android:inputType="number"
-            android:textSize="18sp" />
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <Spinner
-            android:id="@+id/gradeSpinner4"
-            android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/subjectName5"
+                android:layout_width="@dimen/et_subject_name_width_150dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_course_name"
+                android:inputType="text"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditHours5"
+                android:layout_width="@dimen/et_credit_hrs_width_90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/credit_hours"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/gradeSpinner5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp" />
-    </LinearLayout>
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+            <Button
 
-        <EditText
-            android:id="@+id/subjectName5"
-            android:layout_width="@dimen/et_subject_name_width_150dp"
+                android:id="@+id/addCourseButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/btn_add_course_text"
+                android:textSize="20sp"
+                android:backgroundTint="@color/black" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/btn_calculate_text"
+                android:textSize="20sp"
+                android:backgroundTint="@color/black" />
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_reset_text"
+                android:textSize="20sp"
+                android:backgroundTint="@color/black"/>
+
+        </LinearLayout>
+
+        <!-- GPA Display -->
+        <TextView
+            android:id="@+id/gpaResult"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_course_name"
-            android:inputType="text"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/creditHours5"
-            android:layout_width="@dimen/et_credit_hrs_width_90dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:hint="@string/credit_hours"
-            android:inputType="number"
-            android:textSize="18sp" />
-
-        <Spinner
-            android:id="@+id/gradeSpinner5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp" />
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/addCourseButton"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="@string/btn_add_course_text"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:text="@string/your_calculated_gpa_is"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="@string/btn_calculate_text"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/clearButton"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_reset_text"
-            android:textSize="20sp" />
-
     </LinearLayout>
 
-    <!-- GPA Display -->
-    <TextView
-        android:id="@+id/gpaResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
-        android:text="@string/your_calculated_gpa_is"
-        android:textSize="20sp" />
 </LinearLayout>
